@@ -245,3 +245,27 @@ isdecimal() :- It checks if the value is decimal or not, it returns value in Boo
 count() :- It counts total occurrence of a substring. eg: print(s.count('l'))
 startswith() :- It checks if the string starts with a substring , it returns value in Boolean. eg: print(s.startswith('h'))
 endswith() :- It checks if the string end with a substring, it returns value in Boolean. eg: print(s.endswith())
+
+##functions in python :-
+-A function is a reusable block of code that perform a specific task. Functions help organize code reduce repetition and improve readability.
+-Once we declare a function, we can execute it multiple times whenever we need by calling the function. To create a function we have to use a keyword "def" followed by the function name , (), ; and a code block.
+
+#Functions are two types : Predefined function and user defined function.
+-Predefined function means, a function which is already declared by the python developer to perform a specific task. To use a pre defined function we just need to call the function.
+
+-User defined function means a function which is created or declared by the user to perform a specific task. eg: add(), sum()
+-Functions can return a value using a return statement/keyword.
+Syntax : def functionName():
+  #instructions
+e.g:- def sum():
+  print (10+20)
+
+user defined functions are two types :
+1. Functions without parameter
+2. Functions with parameter: 
+eg: def sub(a,b)
+  return a-b
+
+  sub(10,20), sub(200,100)
+- we can pass the default value a parameter in a function to handle error if argument is missing .
+- We can switch the position of parameters while passing value as an argument but we have to mention the parameter name to assigning the value.

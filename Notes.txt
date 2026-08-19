@@ -361,3 +361,66 @@ Types of Constructor:-
 a> Default Constructor:- It takes no arguments except ‘self’ keyword.
 b> Parameterized Constructor:- It takes one or more parameters including self.
 -It initializes objects attribute with user value.
+
+Polymorphism:
+-It means "many forms". It allows a function or method with the same name to perform differently depending on the type of object.
+e.g: class Dog:
+  def speak(self):
+  print("Woof")
+class Cat:
+  def speak(self):
+  print("Meow")
+dog1 = Dog()
+dog1.speak()
+cat1 = Cat()
+cat1.speak()
+
+Encapsulation:- Encapsulation is an OOP principle that involves binding data and methods within a class and restricting direct access to some of the class's components.
+-It improves security, and maintainability of code by controlling how data is accessed and updated.
+-We can achieve encapsulation by converting public variables into private variable by using double underscore(__) before the variable name.
+-It Keeps our code organized and secure by ensuring that objects protect their own data and expression only what is necessary.
+eg: class Bank:
+  def __init__(self, account , balance):
+  self.__balance = balance
+  self.account = account
+  def desposit(self,amount):
+  if amount > 0:
+  self.__balance += amount
+  else:
+  print("Invalid amount")
+  def withdraw(self,amount):
+  if amount > 0 and amount <= self.__balance:
+  self.__balance -= amount
+  else:
+  print("Invalid amount")
+  def get_balance(self):
+  return self.__balance
+account1 = Bank("123456", 1000)
+print(account1.get_balance())
+account1.desposit(100)
+print(account1.get_balance())
+account1.withdraw(500)
+print(account1.get_balance())
+
+Abstraction: Abstraction means hiding the internal details and showing only the necessary features.
+-In Python it can be implemented by using ABC(Abstract Base Classes) and the @abstract methods.
+Syntax:-
+from abc import ABC, abstractmethod
+class ClassName(ABC):
+ 	@abstractmethod
+ 	def methodName(self):
+ 		pass
+ 
+-Subclass must implement the abstract method.
+
+Inheritance: It allows a class to inherit methods and properties from another class.
+-The class from where we inherit is called parent class, and the class which inherits is called child class.
+-Inheritance promotes code reusability.
+Syntax:-
+class ParentClass:
+ 	def methodName(self):
+ 		//instruction
+ 
+class ChildClass(ParentClass):
+ 	//instructions
+-Inheritance extends parent class functionality.
